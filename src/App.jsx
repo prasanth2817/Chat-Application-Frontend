@@ -1,10 +1,13 @@
-import ChatApp from "./ChatApp";
+import AppRoutes from "./Routes/AppRoutes";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
 
   return (
     <>
-     <ChatApp />
+    <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
     </>
   )
 }
