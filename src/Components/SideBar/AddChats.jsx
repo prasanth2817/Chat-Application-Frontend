@@ -11,7 +11,7 @@ const AddChat = () => {
   const handleAddChat = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8002/user/check-user", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/user/check-user`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -31,7 +31,7 @@ const AddChat = () => {
 
       // Fetch messages to trigger the creation of a new conversation
       const messagesRes = await fetch(
-        `http://localhost:8002/messages/create-chat/${userId}`,
+        `${import.meta.env.VITE_API_URL}/messages/create-chat/${userId}`,
         {
           method: "POST",
           headers: {
@@ -51,9 +51,9 @@ const AddChat = () => {
           "please press the refresh button to see the updated chats list!"
         );
       }, 3000);
-      setEmail(""); // Clear input field after success
+      setEmail("");
     } catch (error) {
-      toast.error(error.message); // Display error if user is not found or other issues
+      toast.error(error.message);
     } finally {
       setLoading(false);
     }

@@ -13,7 +13,7 @@ const useGetMessages = () => {
         const token = localStorage.getItem("chat-user");
 
         const res = await fetch(
-          `http://localhost:8002/messages/chats/${selectedConversation._id}`,
+          `${import.meta.env.VITE_API_URL}/messages/chats/${selectedConversation._id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

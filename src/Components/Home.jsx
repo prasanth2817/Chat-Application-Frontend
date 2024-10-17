@@ -3,10 +3,10 @@ import MessageContainer from "../Components/ChatRoom/ChatContainer";
 import Sidebar from "../Components/SideBar/Sidebar";
 
 const Home = () => {
-  const [showChat, setShowChat] = useState(false); // State to toggle chat container on mobile screens
+  const [showChat, setShowChat] = useState(false);
 
   const toggleChat = () => {
-    setShowChat(!showChat); // Toggle between showing the chat container and sidebar
+    setShowChat(!showChat);
   };
 
   return (

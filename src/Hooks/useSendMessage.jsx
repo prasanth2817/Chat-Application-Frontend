@@ -11,7 +11,7 @@ const useSendMessage = () => {
     try {
       const token = localStorage.getItem("chat-user");
       const res = await fetch(
-        `http://localhost:8002/messages/send/${selectedConversation._id}`,
+        `${import.meta.env.VITE_API_URL}/messages/send/${selectedConversation._id}`,
         {
           method: "POST",
           headers: {
