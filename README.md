@@ -31,6 +31,7 @@ npm run dev
 Scripts:
 
 npm run dev: Start the development server.
+
 npm run build: Build the project for production.
 
 ![Screenshot 2024-10-17 082740](https://github.com/user-attachments/assets/9869417b-5073-4c02-9107-0988c7cc0318)
