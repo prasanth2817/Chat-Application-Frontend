@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
+import { jwtDecode } from "jwt-decode";
 
 export const AuthContext = createContext();
 
@@ -7,9 +8,33 @@ export const useAuthContext = () => {
 };
 
 export const AuthContextProvider = ({ children }) => {
-  const [authUser, setAuthUser] = useState(
-    JSON.parse(localStorage.getItem("chat-user")) || null
-  );
+  const [authUser, setAuthUser] = useState(() => {
+    const token = localStorage.getItem("chat-user");
+    if (token) {
+      try {
+        const decodedToken = jwtDecode(token);
+        return decodedToken;
+      } catch (error) {
+        console.error("Failed to decode token:", error);
+        return null;
+      }
+    }
+    return null;
+  });
+  console.log(authUser);
+
+  useEffect(() => {
+    // Set the authUser if the token is updated later
+    const token = localStorage.getItem("User-token");
+    if (token) {
+      try {
+        const decodedToken = jwtDecode(token);
+        setAuthUser(JSON.parse(decodedToken));
+      } catch (error) {
+        console.error("Failed to decode token:", error);
+      }
+    }
+  }, []);
 
   return (
     <AuthContext.Provider value={{ authUser, setAuthUser }}>

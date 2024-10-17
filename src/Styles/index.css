@@ -7,10 +7,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-y: auto;
   height: 100vh;
-  /* display: flex; 
-  justify-content: center; 
-  align-items: center;  */
   font-family: "Inter", sans-serif;
   background: linear-gradient(135deg, rgb(34, 193, 195), rgb(253, 187, 45));
 }
@@ -19,6 +17,26 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+#root {
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 .chat-app {
@@ -113,4 +131,15 @@ body {
 
 .message-input button:hover {
   background-color: #064e45;
+}
+
+.message-container {
+  max-height: 100vh; /* Ensure it doesn't exceed screen height */
+  overflow-y: auto; /* Enable scrolling */
+}
+
+@media (max-width: 768px) {
+  .overflow-auto {
+    -webkit-overflow-scrolling: touch;
+  }
 }

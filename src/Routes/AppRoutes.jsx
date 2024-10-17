@@ -11,15 +11,18 @@ function AppRoutes() {
   const { authUser } = useAuthContext();
   return (
     <>
-    <Routes> 
-      <Route path="/login" element={<Login />} /> 
-      <Route path="/signUp" element={<SignUp />} /> 
-      <Route path="/forgot-password" element={<ForgotPassword />} />
-      <Route path="/reset-password/:token" element={<ResetPassword />} />
-      <Route path='/home' element={authUser ? <Home /> : <Navigate to={"/login"} />} />
-      <Route path="/" element={<Login />} />
-    </Routes>
-    <Toaster />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
+        <Route
+          path="/"
+          element={authUser ? <Home /> : <Navigate to={"/login"} />}
+        />
+      </Routes>
+      <Toaster />
     </>
   );
 }
