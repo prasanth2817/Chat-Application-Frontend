@@ -35,4 +35,8 @@ npm run build: Build the project for production.
 
 ![Screenshot 2024-10-17 082740](https://github.com/user-attachments/assets/9869417b-5073-4c02-9107-0988c7cc0318)
 
-![Screenshot 2024-10-17 082722](https://github.com/user-attachments/assets/7bec178c-ece0-4bd5-a97c-ce9fa46589df)
+![Chat-app-image2](https://github.com/user-attachments/assets/64cb1d2d-ecd2-4c67-b740-efbe8d571626)
+
+![Screenshot 2024-10-17 082811](https://github.com/user-attachments/assets/ef31c7cc-73d3-468a-976c-ab0ca3a103bd)
+
+
