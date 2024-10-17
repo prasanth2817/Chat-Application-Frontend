@@ -66,8 +66,8 @@ const AddChat = () => {
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value.toLowerCase())}
-        placeholder="Enter email"
-        className="input input-bordered w-full p-2 rounded-lg border-gray-300 focus:ring-2 focus:ring-blue-400"
+        placeholder="Enter email to chat"
+        className="input input-bordered focus:ring-2 focus:ring-blue-400 border text-sm rounded-lg block w-full p-2.5  bg-gray-700 border-gray-600 text-white"
       />
 
       {/* Add Chat Button */}
@@ -79,7 +79,7 @@ const AddChat = () => {
         {loading ? (
           "Adding..."
         ) : (
-          <IoPersonAddSharp className="w-6 h-6 sm:w-8 sm:h-8 text-white cursor-pointer" />
+          <IoPersonAddSharp className="w-6 h-6 sm:w-7 sm:h-7 text-white cursor-pointer" />
         )}
       </button>
     </div>

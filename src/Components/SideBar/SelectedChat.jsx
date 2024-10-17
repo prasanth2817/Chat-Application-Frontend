@@ -23,7 +23,7 @@ const Conversations = ({ toggleChat }) => {
             <div
               key={conversation._id}
               onClick={() => handleConversationClick(conversation)}
-              className="cursor-pointer hover:bg-gray-200 p-2 rounded-lg"
+              className="cursor-pointer p-2 rounded-lg"
             >
               <Conversation
                 conversation={conversation}
@@ -34,7 +34,7 @@ const Conversations = ({ toggleChat }) => {
           ))
         : // Show a message if no conversations are found
           !loading && (
-            <p className="text-center text-gray-500">No conversations found</p>
+            <p className="text-center text-2xl text-gray-500">No conversations found</p>
           )}
 
       {/* Show loading spinner when loading */}

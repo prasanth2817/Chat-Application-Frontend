@@ -31,10 +31,10 @@ const SearchInput = () => {
     <form onSubmit={handleSubmit} className="flex items-center gap-2 mx-auto">
       <input
         type="text"
-        placeholder="Search…"
-        className="input input-bordered rounded-full w-full sm:w-auto sm:max-w-xs"
+        placeholder="Search by username…"
+        className="input input-bordered focus:ring-2 focus:ring-blue-400 border text-sm rounded-full block w-full p-2.5  bg-gray-700 border-gray-600 text-white"
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => setSearch(e.target.value.toLowerCase())}
       />
       <button type="submit" className="btn btn-circle bg-sky-500 text-white">
         <IoSearchSharp className="w-5 h-5 sm:w-6 sm:h-6 outline-none" />

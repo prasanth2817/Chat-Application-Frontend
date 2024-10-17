@@ -21,7 +21,6 @@ export const AuthContextProvider = ({ children }) => {
     }
     return null;
   });
-  console.log(authUser);
 
   useEffect(() => {
     // Set the authUser if the token is updated later

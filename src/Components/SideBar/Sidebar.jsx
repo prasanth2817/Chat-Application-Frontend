@@ -7,7 +7,7 @@ const Sidebar = ({ toggleChat }) => {
     <div className="w-full h-screen border-r border-slate-500 p-4 flex flex-col">
       {/* Add Chat and Search */}
       <SearchInput />
-      <div className="divider px-3"></div>
+      <div className="divider px-5"></div>
 
       {/* Conversations */}
       <div className="flex-1 overflow-y-auto">

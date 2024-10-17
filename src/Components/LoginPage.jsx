@@ -68,6 +68,11 @@ const Login = () => {
           </div>
         </form>
       </div>
+      <div className="mt-8">
+        <h3>Sample User Login</h3>
+        <p>email : user1234@gmail.com</p>
+        <p>password : 12345678</p>
+      </div>
     </div>
   );
 };
